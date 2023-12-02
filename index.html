@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap">
 	<link href="css/index-atribut-select.css" rel="stylesheet" type="text/css" />
-	<script async="" src="https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js"></script>
-	<script>
+	<!-- <script async="" src="https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js"></script> -->
+	<!-- <script>
 		(function (m, e, t, r, i, k, a) {
 			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
 			m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a);
@@ -22,32 +22,68 @@
 			trackLinks: true,
 			accurateTrackBounce: true
 		})
-	</script>
+	</script> -->
 	<link rel="icon" href="/images/icons/icon.svg" type="image/svg+xml">
 	<noscript>
 		<img src="https://mc.yandex.ru/watch/83244811" style="position:absolute;left:-9999px" alt="">
 	</noscript>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GH8FX28ET0"></script>
-	<script>
+	<!-- <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag("js", new Date());
 		gtag("config", "G-GH8FX28ET0")
-	</script>
+	</script> -->
+	<style>
+		option:hover {
+			background-color: yellow;
+		}
+
+		select option:checked {
+			box-shadow: 0 0 10px 200px #aa9696 inset;
+		}
+
+		select {
+			overflow: hidden;
+			height: 100%;
+		}
+	</style>
 </head>
 
 <body>
 	<form>
-		<label for="city-select">Атрибут <code>label</code></label>
-		<div class="select-wrapper">
-			<select name="city2" id="city-select2">
-				<option value="petersburg" selected label="Ленинград">Санкт-Петербург</option>
-				<option value="samara" label="Куйбышев">Самара</option>
-				<option value="volgograd" label="Сталинград">Волгоград</option>
-				<option value="ekaterinburg" label="Свердловск">Екатеринбург</option>
-			</select>
+		<!-- <label for="city-select">Атрибут <code>label</code></label>
+		<div class="select-wrapper"> -->
+		<!-- <select name="city2" id="city-select2" > -->
+		<select name="city2" id="city-select2" onfocus='this.size=4;' onblur='this.size=0;' onchange='this.size=1;'>
+			<option class="col" value="petersburg" selected label="Ленинград">Санкт-Петербург</option>
+			<option class="col" value="samara" label="Куйбышев">Самара</option>
+			<option class="col" value="volgograd" label="Сталинград">Волгоград</option>
+			<option class="col" value="ekaterinburg" label="Свердловск">Екатеринбург</option>
+		</select>
 		</div>
 	</form>
+	<!-- <select onfocus='this.size=10;' onblur='this.size=0;' onchange='this.size=1; this.blur();'>
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+	</select> -->
+
 </body>
+
+
 
 </html>
